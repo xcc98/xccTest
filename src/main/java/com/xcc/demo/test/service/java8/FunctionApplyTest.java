@@ -1,6 +1,6 @@
-package test.code.service.java8;
+package com.xcc.demo.test.service.java8;
 
-import test.code.dao.Student;
+import com.xcc.demo.test.dao.Student;
 
 import java.util.ArrayList;
 import java.util.List;

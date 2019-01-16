@@ -1,11 +1,10 @@
-package test.code.service.java8;
+package com.xcc.demo.test.service.java8;
 
-import test.code.dao.Item;
+import com.xcc.demo.test.dao.Item;
 
 import java.math.BigDecimal;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class FilterTest {
     public static void main(String[] args) {

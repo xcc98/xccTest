@@ -1,15 +1,0 @@
-
-O
-squid:S106"9Replace this use of System.out or System.err by a logger.(¬ùß×
-O
-squid:S106"9Replace this use of System.out or System.err by a logger.(ã€‡’
-Ksquid:S1481"/Remove this unused "listResult" local variable.(‚ÚþÜúÿÿÿÿ
-Lsquid:S1481"0Remove this unused "listResult2" local variable.(Òìñúÿÿÿÿ
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(¬ì…­øÿÿÿÿ
-[squid:S1854"?Remove this useless assignment to local variable "listResult2".(Òìñúÿÿÿÿ
-Zsquid:S1854">Remove this useless assignment to local variable "listResult".(‚ÚþÜúÿÿÿÿ
-O
-squid:S106"9Replace this use of System.out or System.err by a logger.(ã€‡’
-T
-squid:S106"9Replace this use of System.out or System.err by a logger.(•Úœåüÿÿÿÿ

@@ -1,4 +1,4 @@
-package test.code.dao;
+package com.xcc.demo.test.dao;
 
 
 import java.math.BigDecimal;

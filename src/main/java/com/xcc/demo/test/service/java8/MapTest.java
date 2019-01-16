@@ -1,4 +1,4 @@
-package test.code.service.java8;
+package com.xcc.demo.test.service.java8;
 
 import java.util.Arrays;
 import java.util.List;
