@@ -1,5 +1,6 @@
 package com.xcc.comm;
 
+import com.xcc.comm.util.ApplicationContextUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -12,7 +13,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
  */
 @SpringBootApplication
 @EnableAsync
-@ComponentScan(basePackages = {"com", "com"})
+@ComponentScan(basePackages = {"com.xcc"})
 public class App 
 {
     public static void main(String[] args) {

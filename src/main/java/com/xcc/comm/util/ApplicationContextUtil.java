@@ -6,7 +6,7 @@
  * @date: 2018/1/18
  * @version: V1.0
  */
-package com.xcc.comm;
+package com.xcc.comm.util;
 
 import org.springframework.context.ApplicationContext;
 

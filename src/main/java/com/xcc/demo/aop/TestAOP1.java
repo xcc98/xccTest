@@ -11,36 +11,48 @@ import java.util.Arrays;
 @Aspect
 @Component
 @Slf4j
-@Order(11)
+//@Order(1)
 public class TestAOP1 {
     
     @Pointcut("execution(public * com.xcc.demo.aop.AopTestController.test())")
     public void test1(){}
 
-
+    /**
+     * 声明一个前置通知
+     */
     @Before("test1()")
-    public void doBefore(JoinPoint joinPoint) throws Throwable {
-        log.info("test1 切入点前置方法");
-        System.out.println(Arrays.toString(joinPoint.getArgs()));
+    public void beforeAdvide(JoinPoint point){
+        log.info("test1  Before() 触发了前置通知！");
     }
+
+    /**
+     * 声明一个后置通知
+     */
     @After("test1()")
-    public void doAfter(JoinPoint joinPoint) throws Throwable {
-        log.info("test1 切入点后置方法");
-        System.out.println(Arrays.toString(joinPoint.getArgs()));
+    public void afterAdvie(JoinPoint point){
+        log.info("test1 After() 触发了后置通知，抛出异常也会被触发！");
     }
 
-    @AfterReturning(returning = "ret", pointcut = "test1()")
-    public void doAfterReturning(Object ret) throws Throwable {
-        // 处理完请求，返回内容
-        log.info("test1 RESPONSE : " + ret);
+    /**
+     * 声明一个返回后通知
+     */
+    @AfterReturning(pointcut="test1()", returning="ret")
+    public void afterReturningAdvice(JoinPoint point, Object ret){
+        log.info("test1 AfterReturning() 触发了返回后通知，抛出异常时不被触发，返回值为：" + ret);
     }
 
-
+    /**
+     * 声明一个异常通知
+     */
+    @AfterThrowing(pointcut="test1()", throwing="throwing")
+    public void afterThrowsAdvice(JoinPoint point, RuntimeException throwing){
+        log.info("test1 AfterThrowing() 触发了异常通知，抛出了异常！");
+    }
 
     
 //    @Before("com.shein.fmis.comm.supplier.controller.PointCut.pointcut()")
 //    public void doBefore(JoinPoint joinPoint) throws Throwable {
 //        log.info("test1 切入点前置方法");
-//        System.out.println(Arrays.toString(joinPoint.getArgs()));
+//        log.info(Arrays.toString(joinPoint.getArgs()));
 //    }
 }

@@ -15,7 +15,9 @@ public class AopTestController {
         Map<String,Object> resultMap = new HashMap<>(1);
 
         resultMap.put("xcc",1222);
-        System.out.println("执行方法"+resultMap.toString());
+        System.out.println("执行方法------------------------------------------------------"+resultMap.toString());
+//        Integer s = null;
+//        s.equals(2);
         return resultMap;
     }
 }
