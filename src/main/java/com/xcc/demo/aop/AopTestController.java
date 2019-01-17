@@ -12,7 +12,7 @@ import java.util.Map;
 public class AopTestController {
     @GetMapping(value = "/test")
     public Map<String,Object> test(){
-        Map<String,Object> resultMap = new HashMap<>();
+        Map<String,Object> resultMap = new HashMap<>(1);
 
         resultMap.put("xcc",1222);
         System.out.println("执行方法"+resultMap.toString());
