@@ -1,5 +1,6 @@
 package com.xcc.demo.aop;
 
+import com.xcc.comm.annotation.Sign;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,10 +15,23 @@ public class AopTestController {
     public Map<String,Object> test(){
         Map<String,Object> resultMap = new HashMap<>(1);
 
-        resultMap.put("xcc",1222);
+        resultMap.put("xcc","testAop");
         System.out.println("执行方法------------------------------------------------------"+resultMap.toString());
 //        Integer s = null;
 //        s.equals(2);
+        return resultMap;
+    }
+
+    @GetMapping(value = "/testSign")
+    @Sign
+    public Map<String,Object> testSign() throws Exception {
+        Map<String,Object> resultMap = new HashMap<>(1);
+        resultMap.put("xcc","testSign");
+        System.out.println("执行方法------------------------------------------------------"+resultMap.toString());
+        Integer s = 1;
+        if(s == 1){
+            throw new Exception("错误");
+        }
         return resultMap;
     }
 }
