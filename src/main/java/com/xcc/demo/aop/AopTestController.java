@@ -18,7 +18,7 @@ public class AopTestController {
         resultMap.put("xcc","testAop");
         System.out.println("执行方法------------------------------------------------------"+resultMap.toString());
 //        Integer s = null;
-//        s.equals(2);
+//        s.toString();
         return resultMap;
     }
 
