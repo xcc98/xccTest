@@ -13,7 +13,7 @@ import java.util.Arrays;
 @Slf4j
 //@Order(3)
 public class TestAOP2 {
-    @Pointcut("execution(public * com.xcc.demo.aop.AopTestController.test())")
+    @Pointcut("execution(public * com.xcc.demo.aop.AopTestController.testSign())")
     public void test2(){}
 
     /**

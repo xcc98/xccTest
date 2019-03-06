@@ -9,7 +9,7 @@ public class ProxyBusiness implements IBusiness, IBusiness2 {
     @Override
     public void doSomeThing() {
         try {
-            Method m = (h.target).getClass().getMethod("doSomeThing1", null);
+            Method m = (h.target).getClass().getMethod("doSomeThing", null);
             h.invoke(this, m, null);
         } catch (Throwable e) {
             // 异常处理（略） 

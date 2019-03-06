@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 //@Order(2)
 public class AroundAOP {
 
-    @Pointcut("execution(public * com.xcc.demo.aop.AopTestController.test())")
+    @Pointcut("execution(public * com.xcc.demo.aop.AopTestController.testSign())")
     public void aroundTest(){}
     
     @Around("aroundTest()")
