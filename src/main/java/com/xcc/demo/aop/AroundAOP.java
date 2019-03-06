@@ -19,7 +19,13 @@ public class AroundAOP {
     @Around("aroundTest()")
     public Object around(ProceedingJoinPoint pjp) throws  Throwable{
         log.info("[Aspect1] around advise 1");
-        Object o =  pjp.proceed();
+        Object o;
+        try {
+            o =  pjp.proceed();
+        }catch (Exception e) {
+            log.info("[Aspect1] around advise2 异常处理" + e);
+            throw new RuntimeException(e);
+        }
         log.info("[Aspect1] around advise2");
         return o;
     }

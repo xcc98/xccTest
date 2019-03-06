@@ -22,7 +22,7 @@ public class LogInvocationHandler implements InvocationHandler {
         
         //执行原有逻辑
         Object recv = method.invoke(target, args);
-        System.out.println("jijiji ");
+        System.out.println("业务逻辑执行完毕 ");
         return recv;
     }
   
