@@ -10,10 +10,10 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 @Slf4j
-//@Order(2)
+@Order(2)
 public class AroundAOP {
 
-    @Pointcut("execution(public * com.xcc.demo.aop.AopTestController.testSign())")
+    @Pointcut("execution(public * com.xcc.demo.aop.AopTestController.test())")
     public void aroundTest(){}
     
     @Around("aroundTest()")

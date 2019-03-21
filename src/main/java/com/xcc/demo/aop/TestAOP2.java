@@ -11,9 +11,9 @@ import java.util.Arrays;
 @Aspect
 @Component
 @Slf4j
-//@Order(1)
+@Order(1)
 public class TestAOP2 {
-    @Pointcut("execution(public * com.xcc.demo.aop.AopTestController.testSign())")
+    @Pointcut("execution(public * com.xcc.demo.aop.AopTestController.test())")
     public void test2(){}
 
     /**

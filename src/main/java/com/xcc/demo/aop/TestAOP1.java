@@ -11,7 +11,7 @@ import java.util.Arrays;
 @Aspect
 @Component
 @Slf4j
-//@Order(2)
+@Order(3)
 public class TestAOP1 {
     
     @Pointcut("execution(public * com.xcc.demo.aop.AopTestController.test())")
@@ -50,7 +50,7 @@ public class TestAOP1 {
     }
 
     
-//    @Before("com.shein.fmis.comm.supplier.controller.PointCut.pointcut()")
+//    @Before("om.xcc.demo.aop.PointCut.pointcut()")
 //    public void doBefore(JoinPoint joinPoint) throws Throwable {
 //        log.info("test1 切入点前置方法");
 //        log.info(Arrays.toString(joinPoint.getArgs()));

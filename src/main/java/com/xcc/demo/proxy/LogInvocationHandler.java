@@ -25,6 +25,7 @@ public class LogInvocationHandler implements InvocationHandler {
         
         //执行原有逻辑
         Object recv = method.invoke(target, args);
+        
         return recv;
     }
   
