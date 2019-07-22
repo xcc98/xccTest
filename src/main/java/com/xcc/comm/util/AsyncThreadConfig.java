@@ -16,18 +16,9 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-
-/**
- * @ClassName: ArcheSheinConfig
- * @Description: 应用配置
- * @author: zhangpeng
- * @date: 2018/1/18
- *
- *        1.0
- */
 @Configuration
 @EnableSwagger2Doc
-public class ArcheThreadConfig {
+public class AsyncThreadConfig {
 
     @Configuration
     static class WebMvcConfiguration extends WebMvcConfigurerAdapter {
@@ -46,7 +37,7 @@ public class ArcheThreadConfig {
     @Bean
     public AsyncTaskExecutor recountMonthInfoPool() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        executor.setThreadNamePrefix("recountMonthInfo");
+        executor.setThreadNamePrefix("check-1");
         executor.setMaxPoolSize(20);
         executor.setCorePoolSize(10);
         return executor;
@@ -61,7 +52,7 @@ public class ArcheThreadConfig {
     @Bean
     public ThreadPoolTaskExecutor checkExecutorPool() {
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
-        executor.setThreadNamePrefix("check-deduct-executor");
+        executor.setThreadNamePrefix("check");
         executor.setMaxPoolSize(1);
         executor.setCorePoolSize(1);
         return executor;
